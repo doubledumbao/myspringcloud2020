@@ -1,0 +1,29 @@
+#nav{
+    background: beige;
+    width: 300px;
+}
+h1{
+    background: darkturquoise;
+    line-height: 50px;
+}
+ul{
+
+}
+ul li{
+    list-style: none;
+    line-height: 30px;
+}
+ul li:hover{
+    background: #ffbcb7;
+}
+a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding-right:4px;
+
+}
+a:hover{
+    color: orange;
+    text-decoration: underline;
+}
