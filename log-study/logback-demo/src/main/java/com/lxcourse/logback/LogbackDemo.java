@@ -15,4 +15,14 @@ public class LogbackDemo {
         LOGGER.debug("debug");
         LOGGER.trace("trace");
     }
+    @Test
+    public void testRollingFile(){
+        for (int i = 0; i < 10000; i++) {
+            LOGGER.error("error");
+            LOGGER.warn("warn");
+            LOGGER.info("info");
+            LOGGER.debug("debug");
+            LOGGER.trace("trace");
+        }
+    }
 }
