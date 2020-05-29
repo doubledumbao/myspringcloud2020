@@ -61,4 +61,10 @@ public class PaymentController {
         return instances;
     }
 
+    @GetMapping("/lb")
+    public String paymentLb(){
+        log.info("paymentLb port:{}",port);
+        return port;
+    }
+
 }
