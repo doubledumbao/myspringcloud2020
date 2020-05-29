@@ -9,60 +9,39 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sfl4j-demo</artifactId>
+    <artifactId>slf4j-bridge-demo</artifactId>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.28</version>
-        </dependency>
-        <!-- slf4j 内置简单日志
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.27</version>
-        </dependency>
-        -->
-        <!--   logback日志
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
-        -->
-        <!-- 绑定为NOP，静默丢弃所有日志记录。
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-nop</artifactId>
-            <version>1.7.28</version>
-        </dependency>
-         -->
-        <!--  绑定log4j 1.2版（一种广泛使用的日志记录框架）。您还需要将log4j.jar放在类路径上。
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.28</version>
-        </dependency>
+        <!-- 注释掉log4j的依赖
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-         -->
-        <!-- 绑定JUL日志 -->
+        -->
+        <!--  slf4j的依赖  -->
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-jdk14</artifactId>
+            <artifactId>slf4j-api</artifactId>
             <version>1.7.28</version>
         </dependency>
-
+        <!--  logback的依赖      -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!--   log4j桥接器     -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.28</version>
+        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
@@ -78,4 +57,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>
