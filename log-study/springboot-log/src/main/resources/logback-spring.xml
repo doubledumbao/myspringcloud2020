@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <property name="pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %C %M [%thread] %msg%n"></property>
+
+    <property name="log_dir" value="/Users/doubledumbao/logs/logger"></property>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+        <target>System.err</target>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <springProfile name="dev">
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %C %M [%thread]------- %msg%n</pattern>
+            </springProfile>
+            <springProfile name="pro">
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %C %M [%thread] xxxxxxxx %msg%n</pattern>
+            </springProfile>
+        </encoder>
+    </appender>
+
+    <!-- 自定义logger对象  additivity="false" 自定义logger对象是否继承rootLogger -->
+    <logger name="com.lxcourse" level="info" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+</configuration>
