@@ -1,0 +1,15 @@
+Mark McGwire: {hr: 65, avg: 0.278}
+Sammy Sosa: {
+  hr: 63,
+  avg: 0.288
+}
+user1: &user1
+  name: zhangsan
+  age: 33
+user2 : &user2
+  name: lisi
+  age: 23
+users :
+  - *user1
+  - *user2
+
